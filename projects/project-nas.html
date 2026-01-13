@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAS imprimé en 3D - Samuel Van Der Hoeven</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header class="project-header">
+        <div class="project-shell">
+            <a class="project-back" href="../../index.html#portfolio" aria-label="Retour au portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Retour au portfolio</span>
+            </a>
+
+            <div class="project-hero-grid">
+                <div class="project-hero">
+                    <p class="project-eyebrow">Projet homelab</p>
+                    <h1 class="project-title">NAS imprimé en 3D</h1>
+                    <p class="project-lead">
+                        Conception d’un boîtier NAS sur mesure (modélisation 3D + assemblage + mise en service) pour fournir
+                        stockage, partage de fichiers et sauvegardes fiables dans mon homelab.
+                    </p>
+
+                    <div class="project-badges" aria-label="Technologies">
+                        <span class="project-badge">Impression 3D</span>
+                        <span class="project-badge">Stockage / RAID</span>
+                        <span class="project-badge">Réseau</span>
+                        <span class="project-badge">Auto-hébergement</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#resume" class="project-cta">
+                            <span>Voir le détail</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#galerie" class="project-cta project-cta--secondary">
+                            <span>Galerie</span>
+                            <i class="far fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../../img/nas.jpg" alt="Boîtier NAS imprimé en 3D" loading="eager">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-shell project-main">
+        <aside class="project-aside" aria-label="Fiche projet">
+            <div class="project-card">
+                <h2 class="project-card-title">Fiche projet</h2>
+
+                <dl class="project-meta">
+                    <div class="project-meta-row">
+                        <dt>Objectif</dt>
+                        <dd>Stockage + sauvegardes + services</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Rôle</dt>
+                        <dd>Conception, intégration, tests</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Contrainte</dt>
+                        <dd>Compact, ventilé, maintenable</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Livrables</dt>
+                        <dd>Boîtier 3D + configuration + documentation</dd>
+                    </div>
+                </dl>
+
+                <nav class="project-toc" aria-label="Sommaire">
+                    <a href="#resume">Résumé</a>
+                    <a href="#objectifs">Objectifs</a>
+                    <a href="#materiel">Matériel</a>
+                    <a href="#logiciel">Logiciel</a>
+                    <a href="#securite">Sécurité</a>
+                    <a href="#resultats">Résultats</a>
+                    <a href="#galerie">Galerie</a>
+                    <a href="#notes">Notes & détails</a>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="project-body">
+            <section id="resume" class="project-section">
+                <h2>Résumé</h2>
+                <p>
+                    Ce projet vise à créer un NAS fiable et adapté à mon environnement homelab, avec un boîtier imprimé en 3D
+                    pensé pour le flux d’air, le câblage et la maintenance. La partie logicielle couvre l’organisation du stockage,
+                    l’exposition réseau (partages), et l’intégration de services de sauvegarde.
+                </p>
+            </section>
+
+            <section id="objectifs" class="project-section">
+                <h2>Objectifs</h2>
+                <ul class="project-list">
+                    <li><strong>Fiabilité</strong> : stockage redondé, monitoring, alerting.</li>
+                    <li><strong>Maintenance</strong> : accès simple aux disques, câbles et ventilation.</li>
+                    <li><strong>Sécurité</strong> : contrôle d’accès, segmentation, chiffrement si nécessaire.</li>
+                    <li><strong>Évolutivité</strong> : capacité à ajouter disques / services au fil du temps.</li>
+                </ul>
+            </section>
+
+            <section id="materiel" class="project-section">
+                <h2>Matériel</h2>
+                <div class="project-grid">
+                    <div class="project-tile">
+                        <h3>Châssis / impression</h3>
+                        <p>Boîtier modélisé puis imprimé en 3D, conçu pour le flux d’air et l’accès aux composants.</p>
+                        <ul class="project-mini-list">
+                            <li>Ventilation / airflow</li>
+                            <li>Passage de câbles</li>
+                            <li>Accès disques</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile">
+                        <h3>Stockage</h3>
+                        <p>Choix des disques et du mode de redondance selon les besoins (capacité, tolérance de panne).</p>
+                        <ul class="project-mini-list">
+                            <li>RAID / pool de stockage</li>
+                            <li>SMART / suivi d’état</li>
+                            <li>Plan de remplacement</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile">
+                        <h3>Réseau</h3>
+                        <p>Intégration au réseau homelab, avec accès sécurisé et performances stables.</p>
+                        <ul class="project-mini-list">
+                            <li>Segmentation (VLAN)</li>
+                            <li>DNS interne</li>
+                            <li>Accès distant (option)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="logiciel" class="project-section">
+                <h2>Logiciel</h2>
+                <div class="project-split">
+                    <div class="project-tile project-tile--flat">
+                        <h3>Services</h3>
+                        <ul class="project-list">
+                            <li>Partages réseau (SMB / NFS selon usage).</li>
+                            <li>Services de sauvegarde (règles, rétention, vérification).</li>
+                            <li>Supervision (disques, températures, capacité).</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile project-tile--flat">
+                        <h3>Organisation</h3>
+                        <ul class="project-list">
+                            <li>Arborescence par usage (documents, médias, sauvegardes).</li>
+                            <li>Comptes/groupes, droits et séparation des données.</li>
+                            <li>Journalisation et alertes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="securite" class="project-section">
+                <h2>Sécurité & sauvegardes</h2>
+                <p>
+                    L’objectif est de réduire la surface d’exposition (accès strictement nécessaire) et d’assurer la continuité
+                    des données via des sauvegardes testées.
+                </p>
+                <ul class="project-list">
+                    <li><strong>Accès</strong> : droits minimaux, séparation admin / utilisateur.</li>
+                    <li><strong>Réseau</strong> : isolation possible dans un VLAN dédié.</li>
+                    <li><strong>Sauvegardes</strong> : stratégie 3-2-1 (à adapter), vérification/restauration régulières.</li>
+                </ul>
+            </section>
+
+            <section id="resultats" class="project-section">
+                <h2>Résultats</h2>
+                <div class="project-kpis">
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Disponibilité</p>
+                        <p class="project-kpi-value">Stable</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Maintenance</p>
+                        <p class="project-kpi-value">Accès rapide</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Objectif</p>
+                        <p class="project-kpi-value">Données protégées</p>
+                    </div>
+                </div>
+                <p class="project-note">
+                </p>
+            </section>
+
+            <section id="galerie" class="project-section">
+                <h2>Galerie</h2>
+                <div class="project-gallery">
+                    <figure class="project-figure">
+                        <img src="../../img/nas1.png" alt="NAS imprimé en 3D - vue principale" loading="lazy">
+                        <figcaption>Vue principale du boîtier.</figcaption>
+                    </figure>
+                    <figure class="project-figure">
+                        <img src="../../img/nas2.png" alt="NAS imprimé en 3D - vue principale" loading="lazy">
+                        <figcaption>intérieur, câblage, ventilation.</figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+            <section id="notes" class="project-section">
+                <h2>Notes & détails</h2>
+                <p>Ces blocs te permettent d’ajouter beaucoup d’information sans alourdir visuellement la page.</p>
+
+                <details class="project-details">
+                    <summary>Composants & spécifications</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>CPU / RAM : Ryzen 5 5600G / 32 Go</li>
+                            <li>Nombre de disques / capacité : 4 HDD / 2 SSD / 18 TO</li>
+                            <li>Ventilation / alimentation : 2 / 550W SFP</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Architecture logicielle</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>OS / distribution : Unraid</li>
+                            <li>RAID / ZFS / autre : ZFS</li>
+                            <li>Partages (SMB/NFS) : SMB, Time Machine</li>
+                            <li>Services (Nextcloud, backup, etc.) : NPM , Hommar, Home Assistant , FreshRSS , immich , n8n</li>
+                        </ul>
+                    </div>
+                </details>
+
+
+                <div class="project-footer-actions">
+                    <a href="../../index.html#portfolio" class="main-btn">
+                        <span class="btn-text">Retour au portfolio</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="../../js/app.js"></script>
+</body>
+</html>

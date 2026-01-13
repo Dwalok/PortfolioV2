@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofi - Samuel Van Der Hoeven</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header class="project-header">
+        <div class="project-shell">
+            <a class="project-back" href="../../index.html#portfolio" aria-label="Retour au portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Retour au portfolio</span>
+            </a>
+
+            <div class="project-hero-grid">
+                <div class="project-hero">
+                    <p class="project-eyebrow">Projet web • Auto-hébergement</p>
+                    <h1 class="project-title">Lofi 🎧</h1>
+                    <p class="project-lead">
+                        Une page web minimaliste pour écouter de la musique lofi avec une ambiance “wallpaper vidéo”, sans dépendre
+                        d’un service tiers ni payer d’abonnements. Le site intègre l’heure, un lecteur audio, un minuteur et des
+                        fonds d’écran lofi changeables, le tout auto-hébergé via NGINX.
+                    </p>
+
+                    <div class="project-badges" aria-label="Technologies">
+                        <span class="project-badge">HTML</span>
+                        <span class="project-badge">CSS</span>
+                        <span class="project-badge">JavaScript</span>
+                        <span class="project-badge">NGINX</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#resume" class="project-cta">
+                            <span>Voir le détail</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#galerie" class="project-cta project-cta--secondary">
+                            <span>Aperçus</span>
+                            <i class="far fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <!-- Remplace par un screenshot de ton site (recommandé) -->
+                    <img src="../../img/lofi2.png" alt="Aperçu du site Lofi" loading="eager">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-shell project-main">
+        <aside class="project-aside" aria-label="Fiche projet">
+            <div class="project-card">
+                <h2 class="project-card-title">Fiche projet</h2>
+
+                <dl class="project-meta">
+                    <div class="project-meta-row">
+                        <dt>Objectif</dt>
+                        <dd>Écouter du lofi “chez soi”, sans abonnement</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Rôle</dt>
+                        <dd>Conception UI/UX, dev front, déploiement</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Contraintes</dt>
+                        <dd>Ultra simple, rapide, épuré, autonome</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Livrables</dt>
+                        <dd>Site web + logique JS + config d’hébergement</dd>
+                    </div>
+                </dl>
+
+                <nav class="project-toc" aria-label="Sommaire">
+                    <a href="#resume">Résumé</a>
+                    <a href="#objectifs">Objectifs</a>
+                    <a href="#fonctionnalites">Fonctionnalités</a>
+                    <a href="#technique">Technique</a>
+                    <a href="#hebergement">Hébergement</a>
+                    <a href="#resultats">Résultats</a>
+                    <a href="#galerie">Aperçus</a>
+                    <a href="#notes">Notes & évolutions</a>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="project-body">
+            <section id="resume" class="project-section">
+                <h2>Résumé</h2>
+                <p>
+                    Lofi est une page web minimaliste qui permet de lancer une musique lofi tout en affichant un fond d’écran
+                    animé (type “wallpaper vidéo”). L’idée : obtenir une ambiance de travail/étude instantanée, sans dépendre
+                    d’une plateforme externe et sans abonnement.
+                </p>
+                <p>
+                    Le site fournit aussi des fonctions “utilitaires” : affichage de l’heure, minuteur, réglage du volume,
+                    et changement de fond pour adapter l’ambiance.
+                </p>
+            </section>
+
+            <section id="objectifs" class="project-section">
+                <h2>Objectifs</h2>
+                <ul class="project-list">
+                    <li><strong>Autonomie</strong> : ne pas dépendre d’un service tiers, contrôler le contenu et la disponibilité.</li>
+                    <li><strong>Simplicité</strong> : un site “one page”, facile à ouvrir, sans onboarding ni distractions.</li>
+                    <li><strong>Expérience</strong> : un design très épuré, centré sur l’ambiance (fond + musique).</li>
+                    <li><strong>Pratique</strong> : minuteur + volume + choix du fond pour un usage quotidien (étude / focus).</li>
+                </ul>
+            </section>
+
+            <section id="fonctionnalites" class="project-section">
+                <h2>Fonctionnalités</h2>
+                <div class="project-grid">
+                    <div class="project-tile">
+                        <h3>Musique lofi</h3>
+                        <p>Lancement d’une playlist/stream lofi directement depuis la page, avec contrôle du volume.</p>
+                        <ul class="project-mini-list">
+                            <li>Bouton lecture / pause</li>
+                            <li>Réglage du volume</li>
+                            <li>Expérience sans pub / sans compte</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile">
+                        <h3>Fond d’écran (ambiance)</h3>
+                        <p>Changement du fond (vidéo / wallpaper) via plusieurs ambiances lofi.</p>
+                        <ul class="project-mini-list">
+                            <li>Plusieurs fonds disponibles</li>
+                            <li>Ambiance visuelle “focus”</li>
+                            <li>Design volontairement épuré</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile">
+                        <h3>Outils focus</h3>
+                        <p>Affichage de l’heure et minuteur intégré pour structurer une session de travail.</p>
+                        <ul class="project-mini-list">
+                            <li>Horloge en temps réel</li>
+                            <li>Minuteur/chronomètre</li>
+                            <li>Utilisable type “pomodoro”</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="technique" class="project-section">
+                <h2>Technique (HTML / CSS / JS)</h2>
+                <div class="project-split">
+                    <div class="project-tile project-tile--flat">
+                        <h3>Front</h3>
+                        <ul class="project-list">
+                            <li><strong>HTML</strong> : structure simple, page directe, navigation minimale.</li>
+                            <li><strong>CSS</strong> : style épuré, centrage sur l’ambiance, lisibilité.</li>
+                            <li><strong>JavaScript</strong> : logique d’horloge, minuteur, player audio, switch de fond.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile project-tile--flat">
+                        <h3>Choix d’architecture</h3>
+                        <ul class="project-list">
+                            <li>Projet volontairement léger (pas de framework) : rapide à charger et facile à maintenir.</li>
+                            <li>Code clair et modulaire : chaque fonctionnalité isolée (player, timer, wallpaper).</li>
+                            <li>Approche “outil du quotidien” : UX simple, actions accessibles en quelques clics.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="hebergement" class="project-section">
+                <h2>Hébergement (auto-host via NGINX)</h2>
+                <p>
+                    Le site est auto-hébergé sur mon infra, servi en statique via <strong>NGINX</strong>. L’objectif est de garder
+                    le contrôle sur la disponibilité, les performances et l’évolution du projet.
+                </p>
+                <ul class="project-list">
+                    <li><strong>Déploiement simple</strong> : fichiers statiques servis par NGINX.</li>
+                    <li><strong>Maintenance</strong> : mise à jour rapide (remplacement des assets / versioning).</li>
+                    <li><strong>Fiabilité</strong> : page légère, peu de dépendances → moins de points de rupture.</li>
+                </ul>
+                <p class="project-note">
+                    Le projet est utilisable directement en ligne : <strong>lofi.samuelvanderhoeven.fr</strong>.
+                </p>
+            </section>
+
+            <section id="resultats" class="project-section">
+                <h2>Résultats</h2>
+                <div class="project-kpis">
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Expérience</p>
+                        <p class="project-kpi-value">Fluide</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Dépendances</p>
+                        <p class="project-kpi-value">Très faibles</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Objectif</p>
+                        <p class="project-kpi-value">Autonome</p>
+                    </div>
+                </div>
+                <p class="project-note">
+                    Ce projet m’a permis de consolider une approche “utile + simple” : un front léger, des features claires,
+                    et un déploiement maîtrisé en auto-hébergement.
+                </p>
+            </section>
+
+            <section id="galerie" class="project-section">
+                <h2>Aperçus</h2>
+                <div class="project-gallery">
+                    <figure class="project-figure">
+                        <!-- Remplace par une capture réelle -->
+                        <img src="../../img/lofi2.png" alt="Lofi - aperçu du site" loading="lazy">
+                        <figcaption>Page principale : musique, ambiance, et focus.</figcaption>
+                    </figure>
+                    <figure class="project-figure">
+                        <!-- Remplace par une capture réelle -->
+                        <img src="../../img/lofi3.png" alt="Lofi - aperçu du site" loading="lazy">
+                        <figcaption>Sélecteur de fonds / wallpapers.</figcaption>
+                    </figure>
+                    <figure class="project-figure">
+                        <!-- Remplace par une capture réelle -->
+                        <img src="../../img/lofi4.png" alt="Lofi - aperçu du site" loading="lazy">
+                        <figcaption>Minuteur/chronomètre + contrôles audio</figcaption>
+                    </figure>
+
+                </div>
+            </section>
+
+            <section id="notes" class="project-section">
+                <h2>Notes & évolutions</h2>
+                <p>
+                    Le projet prévoit plusieurs pistes d’amélioration : enrichir l’ambiance, améliorer le responsive,
+                    et offrir plus de choix côté playlists/radios.
+                </p>
+
+                <details class="project-details">
+                    <summary>Évolutions prévues</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Ajout de bruits d’ambiance : pluie, feu de cheminée, bruit blanc, etc.</li>
+                            <li>Amélioration du responsive (mobile / tablette).</li>
+                            <li>Choix de playlist/radio directement depuis l’interface.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Ce que je referais différemment</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Structurer davantage les modules JS (timer/player/wallpaper) pour faciliter l’évolution.</li>
+                            <li>Ajouter un petit état “actif”/feedback UI (par ex. fond sélectionné, minuteur en cours).</li>
+                            <li>Prévoir une config simple (JSON) pour ajouter facilement fonds et sources audio.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Points clés du projet</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Projet front “léger” : efficacité, rapidité, maintenance.</li>
+                            <li>Auto-hébergement : maîtrise complète de l’accès et des ressources.</li>
+                            <li>Une expérience centrée sur l’usage : écouter, choisir une ambiance, lancer un timer.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <div class="project-footer-actions">
+                    <a href="../../index.html#portfolio" class="main-btn">
+                        <span class="btn-text">Retour au portfolio</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="../../js/app.js"></script>
+</body>
+</html>

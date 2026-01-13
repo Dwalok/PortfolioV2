@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelab & auto-hébergement - Samuel Van Der Hoeven</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header class="project-header">
+        <div class="project-shell">
+            <a class="project-back" href="../../index.html#portfolio" aria-label="Retour au portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Retour au portfolio</span>
+            </a>
+
+            <div class="project-hero-grid">
+                <div class="project-hero">
+                    <p class="project-eyebrow">Projet homelab</p>
+                    <h1 class="project-title">Homelab & auto-hébergement</h1>
+                    <p class="project-lead">
+                        Construction d’une infrastructure personnelle orientée “self-hosting” pour reprendre le contrôle sur mes
+                        données, réduire la dépendance au cloud et héberger mes services (réseau, stockage, applications, supervision)
+                        dans un environnement maîtrisé, documenté et maintenable.
+                    </p>
+
+                    <div class="project-badges" aria-label="Technologies">
+                        <span class="project-badge">Auto-hébergement</span>
+                        <span class="project-badge">Docker / Conteneurs</span>
+                        <span class="project-badge">Réseau</span>
+                        <span class="project-badge">Sauvegardes</span>
+                        <span class="project-badge">Supervision</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#resume" class="project-cta">
+                            <span>Voir le détail</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#galerie" class="project-cta project-cta--secondary">
+                            <span>Galerie</span>
+                            <i class="far fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../../img/server.jpg" alt="Vue du homelab (rack / serveurs / réseau)" loading="eager">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-shell project-main">
+        <aside class="project-aside" aria-label="Fiche projet">
+            <div class="project-card">
+                <h2 class="project-card-title">Fiche projet</h2>
+
+                <dl class="project-meta">
+                    <div class="project-meta-row">
+                        <dt>Objectif</dt>
+                        <dd>Auto-héberger + réduire la dépendance cloud</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Rôle</dt>
+                        <dd>Architecture, déploiement, sécurisation, exploitation</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Contraintes</dt>
+                        <dd>Fiabilité, maintenance, coûts, sécurité, évolutivité</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Livrables</dt>
+                        <dd>Infra + services + monitoring + stratégie de sauvegarde + documentation</dd>
+                    </div>
+                </dl>
+
+                <nav class="project-toc" aria-label="Sommaire">
+                    <a href="#resume">Résumé</a>
+                    <a href="#objectifs">Objectifs</a>
+                    <a href="#materiel">Infrastructure</a>
+                    <a href="#logiciel">Services</a>
+                    <a href="#securite">Sécurité</a>
+                    <a href="#resultats">Résultats</a>
+                    <a href="#galerie">Galerie</a>
+                    <a href="#notes">Notes & détails</a>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="project-body">
+            <section id="resume" class="project-section">
+                <h2>Résumé</h2>
+                <p>
+                    Mon homelab est un projet “long terme” : construire une plateforme personnelle capable d’héberger mes services
+                    (applications, DNS, reverse proxy, stockage, supervision, etc.) avec un objectif clair : <strong>garder mes données chez moi</strong>,
+                    <strong>réduire les dépendances externes</strong> et <strong>maîtriser la sécurité de bout en bout</strong>.
+                </p>
+                <p>
+                    L’approche est volontairement pragmatique : des briques simples, documentées, évolutives. Chaque service déployé
+                    doit apporter une valeur réelle (confort, sécurité, résilience) et rester exploitable dans la durée.
+                </p>
+            </section>
+
+            <section id="objectifs" class="project-section">
+                <h2>Objectifs</h2>
+                <ul class="project-list">
+                    <li><strong>Souveraineté</strong> : données et services hébergés localement (le cloud devient optionnel, pas obligatoire).</li>
+                    <li><strong>Fiabilité</strong> : services stables, supervision, alerting et procédures de reprise.</li>
+                    <li><strong>Sécurité</strong> : exposition minimale, segmentation réseau, gestion des accès, durcissement.</li>
+                    <li><strong>Automatisation</strong> : déploiements reproductibles, maintenance simplifiée, mises à jour maîtrisées.</li>
+                    <li><strong>Évolutivité</strong> : ajouter des services, du stockage et des usages sans “tout casser”.</li>
+                </ul>
+            </section>
+
+            <section id="materiel" class="project-section">
+                <h2>Infrastructure</h2>
+                <div class="project-grid">
+                    <div class="project-tile">
+                        <h3>Compute & virtualisation</h3>
+                        <p>
+                            Des serveurs dédiés aux conteneurs et aux services, dimensionnés pour évoluer (RAM/CPU/stockage),
+                            avec une logique “séparer pour mieux exploiter” : services critiques, médias, tests, etc.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Hôtes pour conteneurs</li>
+                            <li>Services toujours-on</li>
+                            <li>Capacité de montée en charge</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile">
+                        <h3>Stockage & données</h3>
+                        <p>
+                            Le stockage est le cœur du homelab : centraliser, protéger, et rendre accessible. Les données sont organisées
+                            par usage (documents, médias, sauvegardes) avec des droits et une stratégie de rétention.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Partages internes (SMB/NFS selon besoins)</li>
+                            <li>Contrôle des permissions</li>
+                            <li>Plan de sauvegarde & restauration</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile">
+                        <h3>Réseau & accès</h3>
+                        <p>
+                            Un réseau pensé pour être lisible : DNS interne, reverse proxy pour exposer proprement, et segmentation
+                            (ex : VLAN) pour réduire le blast radius en cas d’incident.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>DNS interne / résolution locale</li>
+                            <li>Reverse proxy + routage applicatif</li>
+                            <li>Segmentation & règles d’accès</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="logiciel" class="project-section">
+                <h2>Services</h2>
+                <div class="project-split">
+                    <div class="project-tile project-tile--flat">
+                        <h3>Services auto-hébergés</h3>
+                        <ul class="project-list">
+                            <li><strong>Reverse proxy</strong> : point d’entrée unique et propre pour les applications.</li>
+                            <li><strong>Cloud perso</strong> : fichiers, synchro, partage, accès multi-appareils.</li>
+                            <li><strong>Supervision</strong> : métriques, disponibilité, alerting (ressources + services).</li>
+                            <li><strong>DNS / filtrage</strong> : contrôle local, blocage pubs/trackers, résolution interne.</li>
+                            <li><strong>RSS / veille</strong> : centraliser l’info sans dépendre d’algorithmes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile project-tile--flat">
+                        <h3>Organisation & exploitation</h3>
+                        <ul class="project-list">
+                            <li><strong>Déploiements conteneurisés</strong> : services isolés, faciles à mettre à jour et à rollback.</li>
+                            <li><strong>Logs & observabilité</strong> : diagnostiquer vite (pannes, latences, erreurs applicatives).</li>
+                            <li><strong>Documentation</strong> : “runbooks” et procédures (restauration, rotation de secrets, etc.).</li>
+                            <li><strong>Standardisation</strong> : conventions de nommage, volumes, réseaux, variables, secrets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="securite" class="project-section">
+                <h2>Sécurité & sauvegardes</h2>
+                <p>
+                    Le but n’est pas seulement d’héberger, mais d’héberger proprement : limiter l’exposition, appliquer le principe
+                    du moindre privilège et pouvoir récupérer rapidement après incident (erreur humaine, panne, corruption, ransomware).
+                </p>
+                <ul class="project-list">
+                    <li><strong>Surface d’attaque</strong> : exposition Internet minimisée, services internes par défaut.</li>
+                    <li><strong>Accès</strong> : séparation admin / utilisateurs, mots de passe forts + MFA si applicable.</li>
+                    <li><strong>Segmentation</strong> : isolation des services (réseau / VLAN) et règles strictes.</li>
+                    <li><strong>Sauvegardes</strong> : stratégie de rétention, copies hors-site, <strong>tests de restauration</strong> réguliers.</li>
+                    <li><strong>Durcissement</strong> : mises à jour maîtrisées, secrets gérés proprement, audit de configuration.</li>
+                </ul>
+            </section>
+
+            <section id="resultats" class="project-section">
+                <h2>Résultats</h2>
+                <div class="project-kpis">
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Dépendance cloud</p>
+                        <p class="project-kpi-value">Réduite</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Exploitation</p>
+                        <p class="project-kpi-value">Centralisée</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Résilience</p>
+                        <p class="project-kpi-value">Sauvegardes testées</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="galerie" class="project-section">
+                <h2>Galerie</h2>
+                <div class="project-gallery">
+                    <figure class="project-figure">
+                        <img src="../../img/server.jpg" alt="Homelab - vue d'ensemble (rack / serveurs)" loading="lazy">
+                        <figcaption>Vue d’ensemble de l’infrastructure.</figcaption>
+                    </figure>
+                    <figure class="project-figure project-figure--placeholder">
+                        <div class="project-placeholder" role="img" aria-label="Emplacement image">
+                            <i class="far fa-image"></i>
+                        </div>
+                        <figcaption>Ajoute une photo : topologie réseau / câblage / baie.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="notes" class="project-section">
+                <h2>Notes & détails (extensible)</h2>
+
+                <details class="project-details">
+                    <summary>Stack & services</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Reverse proxy :Nginx Proxi Manager</li>
+                            <li>DNS / filtrage :cloudflare / Pi-hole</li>
+                            <li>Cloud perso : Stockage, News, Divertissement</li>
+                            <li>Monitoring / alerting : Uptime Kuma / Discord</li>
+                            <li>Outils de gestion : Unraid, Proxmox, Portainer</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Sauvegardes & PRA</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Sources sauvegardées: Ordinateur, serveurs, VMs, conteneurs, configurations, données</li>
+                            <li>Rétention : quotidienne, hebdomadaire</li>
+                            <li>Copie offsite (où / comment) : NAS local + cloud </li>
+                            <li>Test de restauration (fréquence / procédure) : mensuel</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Problèmes rencontrés & solutions</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Exposition Internet / accès distant : samuelvanderhoeven.fr et ses sous-domaines</li>
+                            <li>Certificats / DNS / reverse proxy : Let's Encrypt / Cloudflare / Nginx Proxy Manager</li>
+                            <li>Disponibilité / redémarrages / maintenance : 24/7, tests réguliers</li>
+                            <li>Saturation stockage / performance : monitoring, alertes, optimisations</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <div class="project-footer-actions">
+                    <a href="../../index.html#portfolio" class="main-btn">
+                        <span class="btn-text">Retour au portfolio</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
+    </div>
+    <script src="../../js/app.js"></script>
+</body>
+</html>
