@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owasp-Challenge - Samuel Van Der Hoeven</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header class="project-header">
+        <div class="project-shell">
+            <a class="project-back" href="../index.html#portfolio" aria-label="Retour au portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Retour au portfolio</span>
+            </a>
+
+            <div class="project-hero-grid">
+                <div class="project-hero">
+                    <p class="project-eyebrow">Projet académique</p>
+                    <h1 class="project-title">Owasp-Challenge</h1>
+                    <p class="project-lead">
+                        Développement d’une plateforme web volontairement vulnérable, conçue pour permettre à ma classe de
+                        s’entraîner “en conditions” sur des failles courantes. L’objectif : proposer 8 challenges inspirés OWASP,
+                        avec un site simple côté front (HTML/CSS/JS) et des vulnérabilités principalement implémentées en PHP.
+                    </p>
+
+                    <div class="project-badges" aria-label="Technologies">
+                        <span class="project-badge">PHP</span>
+                        <span class="project-badge">OWASP Top 10</span>
+                        <span class="project-badge">Web Security</span>
+                        <span class="project-badge">Challenges</span>
+                        <span class="project-badge">HTML / CSS / JS</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#resume" class="project-cta">
+                            <span>Voir le détail</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#galerie" class="project-cta project-cta--secondary">
+                            <span>Aperçu</span>
+                            <i class="far fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../img/owasp.png" alt="Aperçu du projet Owasp-Challenge (plateforme web de challenges)" loading="eager">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-shell project-main">
+        <aside class="project-aside" aria-label="Fiche projet">
+            <div class="project-card">
+                <h2 class="project-card-title">Fiche projet</h2>
+
+                <dl class="project-meta">
+                    <div class="project-meta-row">
+                        <dt>Objectif</dt>
+                        <dd>Créer une plateforme d’entraînement à 8 failles web (type OWASP)</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Rôle</dt>
+                        <dd>Conception des challenges, développement, tests, mise en place du parcours</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Contraintes</dt>
+                        <dd>Pédagogie, reproductibilité, réalisme, niveau progressif, sécurité du cadre</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Livrables</dt>
+                        <dd>Plateforme + 8 challenges + consignes + environnement de déploiement</dd>
+                    </div>
+                </dl>
+
+                <nav class="project-toc" aria-label="Sommaire">
+                    <a href="#resume">Résumé</a>
+                    <a href="#objectifs">Objectifs</a>
+                    <a href="#materiel">Architecture</a>
+                    <a href="#logiciel">Challenges</a>
+                    <a href="#securite">Sécurité</a>
+                    <a href="#resultats">Résultats</a>
+                    <a href="#galerie">Aperçu</a>
+                    <a href="#notes">Notes & détails</a>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="project-body">
+            <section id="resume" class="project-section">
+                <h2>Résumé</h2>
+                <p>
+                    Owasp-Challenge est une plateforme web développée dans un cadre académique pour permettre à des étudiants
+                    de s’entraîner sur des vulnérabilités web fréquentes. Le site est volontairement “basique” côté interface
+                    (HTML/CSS/JS), tandis que les failles sont principalement mises en place en <strong>PHP</strong> afin de reproduire
+                    des erreurs de développement réalistes.
+                </p>
+                <p>
+                    Le projet se présente comme un parcours de <strong>8 challenges</strong>, chacun centré sur une thématique
+                    de sécurité (OWASP). L’idée n’était pas de “casser pour casser”, mais de créer un support concret pour
+                    comprendre, exploiter, puis corriger/mitiger les failles.
+                </p>
+            </section>
+
+            <section id="objectifs" class="project-section">
+                <h2>Objectifs</h2>
+                <ul class="project-list">
+                    <li><strong>Pédagogie</strong> : apprendre par la pratique sur un environnement contrôlé.</li>
+                    <li><strong>Réalisme</strong> : simuler des vulnérabilités vues en cours / en audit (mauvaises pratiques, erreurs courantes).</li>
+                    <li><strong>Progressivité</strong> : proposer des challenges accessibles mais suffisamment variés.</li>
+                    <li><strong>Reproductibilité</strong> : permettre aux camarades de rejouer les scénarios facilement.</li>
+                    <li><strong>Culture sécurité</strong> : relier chaque exploit à une cause (root cause) et aux bonnes mitigations.</li>
+                </ul>
+            </section>
+
+            <section id="materiel" class="project-section">
+                <h2>Architecture</h2>
+                <div class="project-grid">
+                    <div class="project-tile">
+                        <h3>Structure de la plateforme</h3>
+                        <p>
+                            Un site web simple, organisé autour d’un menu de challenges. Chaque challenge correspond à une page
+                            / fonctionnalité dédiée avec un comportement volontairement vulnérable.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Parcours clair (8 modules)</li>
+                            <li>Objectifs et consignes par challenge</li>
+                            <li>Navigation simple et rapide</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile">
+                        <h3>Back-end vulnérable (PHP)</h3>
+                        <p>
+                            Les vulnérabilités sont implémentées dans le code serveur pour reproduire des erreurs fréquentes :
+                            validation insuffisante, contrôles d’accès manquants, logique d’authentification fragile, etc.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Endpoints/traitements dédiés</li>
+                            <li>Manipulation de sessions et paramètres</li>
+                            <li>Comportements volontairement “fail”</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile">
+                        <h3>Front-end minimal (HTML/CSS/JS)</h3>
+                        <p>
+                            L’interface reste volontairement sobre : l’objectif est de se concentrer sur la compréhension des failles,
+                            pas sur un design complexe. Le JavaScript est utilisé uniquement lorsque nécessaire au scénario.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Pages statiques simples</li>
+                            <li>Interactions légères</li>
+                            <li>Lisibilité des parcours</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="logiciel" class="project-section">
+                <h2>Challenges</h2>
+                <div class="project-split">
+                    <div class="project-tile project-tile--flat">
+                        <h3>Les 8 challenges</h3>
+                        <ul class="project-list">
+                            <li><strong>Injection SQL</strong> : exploitation d’entrées non filtrées côté base de données.</li>
+                            <li><strong>XSS</strong> : injection de scripts via rendu non échappé.</li>
+                            <li><strong>CSRF</strong> : actions déclenchables sans protection anti-CSRF.</li>
+                            <li><strong>Broken Authentication</strong> : faiblesses d’authentification / gestion de session.</li>
+                            <li><strong>XXE</strong> : external entity sur parsing XML mal configuré.</li>
+                            <li><strong>IDOR</strong> : accès direct à des ressources sans contrôle d’autorisation.</li>
+                            <li><strong>Insecure Deserialization</strong> : désérialisation non sûre menant à des impacts critiques.</li>
+                            <li><strong>SSRF</strong> : serveur utilisé comme proxy interne vers des ressources non exposées.</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile project-tile--flat">
+                        <h3>Format & consignes</h3>
+                        <ul class="project-list">
+                            <li><strong>Objectif clair</strong> : créer un environnement vulnérable mais contrôlé pour l’entraînement.</li>
+                            <li><strong>Indices</strong> : suffisamment de contexte pour guider sans “donner la réponse”.</li>
+                            <li><strong>Compréhension</strong> : relier l’exploit à la cause dans le code.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="securite" class="project-section">
+                <h2>Sécurité</h2>
+                <p>
+                    Le projet est conçu pour être vulnérable, mais dans un cadre maîtrisé : l’objectif est l’entraînement, pas la mise
+                    en danger. Le déploiement doit donc rester <strong>isolé</strong> et réservé à un usage pédagogique, avec une
+                    séparation nette entre l’environnement de test et toute ressource sensible.
+                </p>
+                <ul class="project-list">
+                    <li><strong>Cadre</strong> : plateforme dédiée à l’apprentissage, environnement contrôlé.</li>
+                    <li><strong>Isolation</strong> : exécution sur une machine/lab séparé, sans accès à des données réelles.</li>
+                    <li><strong>Accès</strong> : périmètre restreint (réseau local / groupe de travail), pas d’exposition inutile.</li>
+                    <li><strong>Traçabilité</strong> : logs de base pour comprendre les actions et déboguer les scénarios.</li>
+                    <li><strong>Hygiène</strong> : documentation claire sur “où” et “comment” déployer sans risque.</li>
+                </ul>
+            </section>
+
+            <section id="resultats" class="project-section">
+                <h2>Résultats</h2>
+                <div class="project-kpis">
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Challenges</p>
+                        <p class="project-kpi-value">8 scénarios</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Thématiques</p>
+                        <p class="project-kpi-value">OWASP (web)</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Usage</p>
+                        <p class="project-kpi-value">Entraînement</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="galerie" class="project-section">
+                <h2>Aperçu</h2>
+                <div class="project-gallery">
+                    <figure class="project-figure">
+                        <img src="../img/owasp1.png" alt="Aperçu de la plateforme Owasp-Challenge" loading="lazy">
+                        <figcaption>Page d’accueil / entrée vers les challenges (aperçu).</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="notes" class="project-section">
+                <h2>Notes & détails</h2>
+
+                <details class="project-details">
+                    <summary>Stack & organisation du code</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Back-end : PHP (routes/pages de challenge)</li>
+                            <li>Front-end : HTML / CSS / JavaScript</li>
+                            <li>Stockage : fichiers / base de données (selon challenge)</li>
+                            <li>Structure : 8 modules, navigation par menu</li>
+                            <li>Environnement : local/lab, déploiement isolé</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Détail des challenges</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>SQLi : page concernée, entrée vulnérable, impact attendu</li>
+                            <li>XSS : contexte (reflected/stored), payload, sortie non échappée</li>
+                            <li>CSRF : action ciblée, absence de token, démonstration</li>
+                            <li>Broken Auth : faiblesse choisie (sessions, brute force, logique, etc.)</li>
+                            <li>XXE : parsing XML, configuration, lecture de ressources</li>
+                            <li>IDOR : ressource exposée, ID manipulable, absence d’ACL</li>
+                            <li>Deserialization : format, objet, conséquence</li>
+                            <li>SSRF : endpoint, cibles internes, restrictions contournées</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <div class="project-footer-actions">
+                    <a href="../index.html#portfolio" class="main-btn">
+                        <span class="btn-text">Retour au portfolio</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="theme-btn" type="button" aria-label="Basculer le thème">
+        <i class="fas fa-adjust"></i>
+    </button>
+    <script src="../js/app.js"></script>
+</body>
+</html>

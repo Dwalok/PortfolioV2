@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaultGen - Samuel Van Der Hoeven</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="project-page">
+    <header class="project-header">
+        <div class="project-shell">
+            <a class="project-back" href="../index.html#portfolio" aria-label="Retour au portfolio">
+                <i class="fas fa-arrow-left"></i>
+                <span>Retour au portfolio</span>
+            </a>
+
+            <div class="project-hero-grid">
+                <div class="project-hero">
+                    <p class="project-eyebrow">Projet cybersécurité</p>
+                    <h1 class="project-title">VaultGen</h1>
+                    <p class="project-lead">
+                        Application web légère (HTML/CSS/JS) pour générer des mots de passe robustes, analyser leur force
+                        (entropie, longueur, composition) et détecter les mots de passe trop communs / déjà compromis.
+                    </p>
+
+                    <div class="project-badges" aria-label="Technologies">
+                        <span class="project-badge">HTML</span>
+                        <span class="project-badge">CSS</span>
+                        <span class="project-badge">JavaScript</span>
+                        <span class="project-badge">Entropie</span>
+                        <span class="project-badge">Password audit</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <a href="#resume" class="project-cta">
+                            <span>Voir le détail</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#galerie" class="project-cta project-cta--secondary">
+                            <span>Galerie</span>
+                            <i class="far fa-images"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-hero-media">
+                    <img src="../img/vaultgen.png" alt="VaultGen - interface générateur et analyseur de mots de passe" loading="eager">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="project-shell project-main">
+        <aside class="project-aside" aria-label="Fiche projet">
+            <div class="project-card">
+                <h2 class="project-card-title">Fiche projet</h2>
+
+                <dl class="project-meta">
+                    <div class="project-meta-row">
+                        <dt>Objectif</dt>
+                        <dd>Générer + analyser des mots de passe</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Rôle</dt>
+                        <dd>Conception UI, dev front, logique sécurité</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Public</dt>
+                        <dd>Utilisateurs finaux & sensibilisation</dd>
+                    </div>
+                    <div class="project-meta-row">
+                        <dt>Livrables</dt>
+                        <dd>Application web responsive (frontend)</dd>
+                    </div>
+                </dl>
+
+                <nav class="project-toc" aria-label="Sommaire">
+                    <a href="#resume">Résumé</a>
+                    <a href="#objectifs">Objectifs</a>
+                    <a href="#fonctionnalites">Fonctionnalités</a>
+                    <a href="#techno">Technologies</a>
+                    <a href="#securite">Approche sécurité</a>
+                    <a href="#resultats">Résultats</a>
+                    <a href="#galerie">Galerie</a>
+                    <a href="#notes">Notes & détails</a>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="project-body">
+            <section id="resume" class="project-section">
+                <h2>Résumé</h2>
+                <p>
+                    VaultGen est une application web simple, rapide et entièrement responsive, conçue pour améliorer l’hygiène
+                    des mots de passe au quotidien. L’idée : proposer un générateur configurable (longueur + types de caractères)
+                    et un analyseur qui donne une lecture claire de la robustesse (entropie, composition), tout en alertant lorsque
+                    le mot de passe appartient à une liste de mots de passe courants (donc à risque).
+                </p>
+            </section>
+
+            <section id="objectifs" class="project-section">
+                <h2>Objectifs</h2>
+                <ul class="project-list">
+                    <li><strong>Génération robuste</strong> : créer des mots de passe forts et uniques, paramétrables.</li>
+                    <li><strong>Analyse de sécurité</strong> : rendre visible la qualité d’un mot de passe (entropie, longueur, complexité).</li>
+                    <li><strong>Prévention</strong> : détecter les mots de passe trop communs / déjà connus comme faibles.</li>
+                    <li><strong>Simplicité</strong> : outil accessible, sans dépendance lourde, utilisable sur mobile comme sur desktop.</li>
+                </ul>
+            </section>
+
+            <section id="fonctionnalites" class="project-section">
+                <h2>Fonctionnalités</h2>
+
+                <div class="project-grid">
+                    <div class="project-tile">
+                        <h3>Générateur configurable</h3>
+                        <p>
+                            Génération rapide de mots de passe solides, avec personnalisation de la longueur et des familles de caractères.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Minuscules / majuscules</li>
+                            <li>Chiffres</li>
+                            <li>Caractères spéciaux</li>
+                            <li>Longueur ajustable</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile">
+                        <h3>Analyse & entropie</h3>
+                        <p>
+                            Évaluation de la robustesse : lecture claire des critères (longueur, diversité des caractères) et indication d’entropie.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Entropie estimée</li>
+                            <li>Composition (types de caractères)</li>
+                            <li>Retour visuel compréhensible</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-tile">
+                        <h3>Détection des mots de passe faibles</h3>
+                        <p>
+                            Vérification basique contre une liste de mots de passe courants, pour éviter les choix classiques et facilement devinables.
+                        </p>
+                        <ul class="project-mini-list">
+                            <li>Comparaison avec une base “common credentials”</li>
+                            <li>Alerte en cas de correspondance</li>
+                            <li>Objectif : sensibilisation & prévention</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="techno" class="project-section">
+                <h2>Technologies</h2>
+                <div class="project-split">
+                    <div class="project-tile project-tile--flat">
+                        <h3>Stack</h3>
+                        <ul class="project-list">
+                            <li><strong>HTML</strong> pour la structure.</li>
+                            <li><strong>CSS</strong> pour une UI épurée et responsive.</li>
+                            <li><strong>JavaScript</strong> pour la génération, l’analyse, et les interactions.</li>
+                        </ul>
+                    </div>
+                    <div class="project-tile project-tile--flat">
+                        <h3>Principes</h3>
+                        <ul class="project-list">
+                            <li>Frontend léger, démarrage instantané.</li>
+                            <li>UX simple (objectif : usage “au quotidien”).</li>
+                            <li>Responsive (desktop / mobile).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="securite" class="project-section">
+                <h2>Approche sécurité</h2>
+                <p>
+                    L’objectif n’est pas seulement de “générer au hasard”, mais de guider vers de bonnes pratiques et d’éviter les pièges fréquents.
+                    VaultGen met l’accent sur des signaux compréhensibles : longueur, variété de caractères, estimation d’entropie, et alerte sur les
+                    mots de passe trop communs.
+                </p>
+                <ul class="project-list">
+                    <li><strong>Robustesse</strong> : favoriser des mots de passe longs et variés.</li>
+                    <li><strong>Lisibilité</strong> : fournir des retours concrets (pas juste “faible/fort”).</li>
+                    <li><strong>Prévention</strong> : éviter les mots de passe présents dans des listes de crédentials courants.</li>
+                    <li><strong>Bonnes pratiques</strong> : encourager des mots de passe uniques par service.</li>
+                </ul>
+
+            </section>
+
+            <section id="resultats" class="project-section">
+                <h2>Résultats</h2>
+                <div class="project-kpis">
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">UX</p>
+                        <p class="project-kpi-value">Simple</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Compatibilité</p>
+                        <p class="project-kpi-value">Responsive</p>
+                    </div>
+                    <div class="project-kpi">
+                        <p class="project-kpi-label">Valeur</p>
+                        <p class="project-kpi-value">Sensibilisation</p>
+                    </div>
+                </div>
+
+                <p>
+                    VaultGen répond à un besoin concret : disposer d’un outil rapide pour générer et auditer un mot de passe, sans dépendre
+                    d’un service tiers. L’application reste volontairement minimaliste, afin d’être facilement réutilisable et intégrable.
+                </p>
+            </section>
+
+            <section id="galerie" class="project-section">
+                <h2>Galerie</h2>
+                <div class="project-gallery">
+                    <figure class="project-figure">
+                        <img src="../img/vaultgen.png" alt="VaultGen - écran principal" loading="lazy">
+                        <figcaption>Écran principal : génération + analyse.</figcaption>
+                    </figure>
+                     <figure class="project-figure">
+                        <img src="../img/gen.png" alt="VaultGen - écran principal" loading="lazy">
+                        <figcaption>réglages (longueur, types de caractères).</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="notes" class="project-section">
+                <h2>Notes & détails</h2>
+
+                <details class="project-details">
+                    <summary>Critères d’analyse </summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Longueur minimale recommandée (ex : 12+).</li>
+                            <li>Mix de familles de caractères (min/maj/chiffres/spéciaux).</li>
+                            <li>Estimation d’entropie et interprétation (faible / moyen / fort).</li>
+                            <li>Détection de patterns simples (si tu l’as implémentée : suites, répétitions, etc.).</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Base “common credentials”</summary>
+                    <div class="project-details-body">
+                        <p>
+                            Le projet s’appuie sur une liste de mots de passe courants issue du dépôt GitHub
+                            <strong>Common-Credentials</strong> (BrandonW6000) afin d’améliorer la détection des mots de passe
+                            trop fréquents.
+                        </p>
+                        <ul class="project-list">
+                            <li>Objectif : refuser/alerter sur les choix trop évidents.</li>
+                            <li>Impact : meilleure prévention des mots de passe “faciles”.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="project-details">
+                    <summary>Pistes d’amélioration (V2)</summary>
+                    <div class="project-details-body">
+                        <ul class="project-list">
+                            <li>Mode “passphrase” (plus mémorisable, très robuste).</li>
+                            <li>Vérification de compromission via API (k-anonymity) plutôt qu’une simple liste locale.</li>
+                            <li>Indicateurs avancés : détection de fuites (dates, prénoms), dictionnaire, patterns clavier.</li>
+                            <li>Export / copie sécurisée + options d’accessibilité.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <div class="project-footer-actions">
+                    <a href="../index.html#portfolio" class="main-btn">
+                        <span class="btn-text">Retour au portfolio</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-left"></i></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="theme-btn" type="button" aria-label="Basculer le thème">
+        <i class="fas fa-adjust"></i>
+    </button>
+    <script src="../js/app.js"></script>
+</body>
+</html>
