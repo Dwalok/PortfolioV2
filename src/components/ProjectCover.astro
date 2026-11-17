@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  eager?: boolean;
+}
+
+const { project, eager = false } = Astro.props;
+const { cover, coverAlt, title, hue } = project.data;
+const vt = `cover-${project.id}`;
+---
+
+{
+  cover ? (
+    <img
+      src={cover}
+      alt={coverAlt ?? title}
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+      style={`view-transition-name: ${vt}`}
+    />
+  ) : (
+    <div class="gen-cover" style={`--h: ${hue}; view-transition-name: ${vt}`} role="img" aria-label={title}>
+      <span class="gen-cover__word">{title}</span>
+    </div>
+  )
+}

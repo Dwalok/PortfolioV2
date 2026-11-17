@@ -1,0 +1,70 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page introuvable — Samuel Van Der Hoeven" description="Cette page n'existe pas.">
+  <main class="nf shell">
+    <p class="mono nf__code">Erreur 404 · route introuvable</p>
+    <h1 class="nf__title" data-split>Paquet <span class="serif">perdu</span> en route.</h1>
+    <p class="nf__text" data-reveal>
+      La page demandée n'existe pas, ou plus. Le lien est peut-être ancien : le portfolio a été refait.
+    </p>
+    <pre class="nf__trace mono" data-reveal aria-hidden="true">$ traceroute samuelvanderhoeven.fr/…
+ 1  homelab.local       0.4 ms
+ 2  reverse-proxy       1.1 ms
+ 3  * * *  destination unreachable</pre>
+    <div class="nf__actions" data-reveal>
+      <a class="btn btn--solid" href="/" data-magnetic>Retour à l'accueil</a>
+      <a class="btn" href="/#projets" data-magnetic>Voir les projets</a>
+    </div>
+  </main>
+</Base>
+
+<style>
+  .nf {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 28px;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: radial-gradient(ellipse at 20% 40%, rgba(110, 255, 201, 0.1), transparent 55%);
+  }
+  .nf__code {
+    color: var(--accent);
+  }
+  .nf__title {
+    font-size: clamp(56px, 11vw, 180px);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+    font-weight: 500;
+  }
+  .nf__title .serif {
+    color: var(--accent);
+  }
+  .nf__text {
+    max-width: 560px;
+    color: var(--muted);
+    font-size: 19px;
+  }
+  .nf__trace {
+    margin: 0;
+    padding: 20px 24px;
+    max-width: 560px;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface);
+    color: var(--dim);
+    font-size: 12px;
+    line-height: 1.8;
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+  .nf__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+</style>
